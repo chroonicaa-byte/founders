@@ -1,14 +1,24 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowRight, Mic, Target, Heart, Zap, Award } from 'lucide-react'
+// import { ArrowRight, Mic, Target, Heart, Zap, Award } from 'lucide-react'
+
+import { ArrowRight, Mic, Target, Heart, Zap, Award,CheckCircle2 ,Building2,} from 'lucide-react'
+// import { ArrowRight, CheckCircle2, Mic, Building2, Users, GraduationCap, Star, ChevronRight } from 'lucide-react'
 
 export const metadata: Metadata = { title: 'About – Real HR. Real Story.' }
 
 const values = [
-  { icon: Target, title: 'Outcome-Obsessed', desc: 'Every recommendation we make is tied to a real business or career result — not theoretical best practice.' },
-  { icon: Heart, title: 'Human-First HR', desc: 'HR isn\'t paperwork. It\'s people. We build systems that respect both the founder\'s constraints and the employee\'s dignity.' },
-  { icon: Zap, title: 'Practical Over Perfect', desc: 'You don\'t need a 40-page HR manual. You need the right 5 policies that your team will actually follow.' },
-  { icon: Award, title: 'Insider Perspective', desc: 'We\'ve sat on both sides of the table — interviewing, hiring, coaching, and advising. That perspective is our edge.' },
+  { icon: Target, title: 'Real Experience Over Theoretical Advice', desc: 'The insights shared here — through conversations with founders and professionals — are grounded in real operational challenges, not textbook concepts.' },
+  { icon: Heart, title: 'Strong Foundations Build Strong Team', desc: 'Compliance, role clarity, structured hiring, and performance accountability are the base of sustainable growth.' },
+  { icon: Zap, title: 'Honest Dialogue Drives Better Decisions', desc: 'Open discussions about mistakes, challenges, and learning curves create smarter founders and more confident professionals.' },
+  { icon: Award, title: 'Clarity Creates Direction', desc: 'Whether building a company or a career, clarity in systems, expectations, and goals leads to long-term confidence and success.' },
+]
+
+const missionPoints = [
+  'Help founders build strong, compliant, high-performing teams.',
+  'Help professionals navigate career growth with clarity and strategic direction.',
+  'Bridge the gap between HR systems and real business realities.',
+  // 'Lessons from hiring mistakes and leadership decisions',
 ]
 
 export default function AboutPage() {
@@ -27,7 +37,7 @@ export default function AboutPage() {
               HR Without the Corporate Script
             </h1>
             <p className="text-white/75 text-xl leading-relaxed">
-              FounderUnfiltered9 exists because most HR advice is either too generic, too expensive, or too disconnected from how small businesses actually operate.
+              Founders Unfiltered exists to bring practical, honest, and experience-driven insights to new  founders and growing businesses & working professionals.
             </p>
           </div>
         </div>
@@ -42,16 +52,39 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <p className="text-gold-600 text-sm font-semibold tracking-widest uppercase mb-3">The Story</p>
-              <h2 className="heading-xl mb-6">Built From 8 Years Inside HR</h2>
+              <h2 className="heading-xl mb-6">Bridging the Gap: People, Process, and Performance</h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-                FounderUnfiltered9 was built by an HR professional who spent years inside companies — processing payroll, building policies, running interviews, and watching businesses make the same avoidable HR mistakes over and over.
+                I’m an HR professional with years of experience across payroll management, statutory compliance, employee lifecycle operations, and corporate HR strategy. My work has consistently focused on building structured, legally sound, and people-centric systems that help businesses grow sustainably.
               </p>
               <p className="text-muted-foreground text-lg leading-relaxed mb-5">
-                The consulting practice started because founders kept asking: <em>"Can you just help us get this right?"</em> The podcast started because thousands more needed the same answers but couldn't afford a consultant.
+                Through this platform, I combine my HR expertise with meaningful conversations.
               </p>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Today, FounderUnfiltered9 serves startups, SMEs, freshers, career-breakers, and professionals who want HR advice without the jargon — and results without the fluff.
+                As a podcast host, I engage with founders, business leaders, and experienced professionals to explore the real side of entrepreneurship — team building, compliance challenges, leadership decisions, hiring mistakes, career transitions, and growth strategies. These conversations are practical, honest, and focused on execution — not theory.
               </p>
+              <h4 className="heading-xl mb-4">
+                My mission is clear:
+              </h4>
+               <div className="space-y-3">
+                {missionPoints.map((point) => (
+                  <div key={point} className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-gold-500 mt-0.5 shrink-0" />
+                    <span className="text-foreground text-sm">{point}</span>
+                  </div>
+                ))}
+              <p className="text-muted-foreground text-lg leading-relaxed">
+               This platform is not about generic advice.
+               </p>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+               It is about structure, insight, and practical understanding.
+               </p>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+               If you’re building a company or building your career — you’re in the right place.
+               </p>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+               Let’s build with clarity and confidence.
+               </p>
+              </div>
               <Link href="/services"
                 className="inline-flex items-center gap-2 mt-8 px-6 py-3 rounded-xl bg-gold-gradient text-brand-900 font-semibold text-sm hover:opacity-90 transition-opacity"
               >
@@ -64,14 +97,18 @@ export default function AboutPage() {
                 <Mic className="h-8 w-8 text-gold-400 mb-4" />
                 <h3 className="font-display text-xl font-bold mb-2">The Podcast Side</h3>
                 <p className="text-white/70 text-sm leading-relaxed">
-                  FounderUnfiltered9 Podcast covers real workplace problems — compliance nightmares, difficult hires, career pivots, salary negotiations — without the corporate filter. Every episode is a free clinic. Every booking is a paid one.
+                  Founders Unfiltered is a podcast where we break down real business journeys — from zero to profitability. No gyaan, no theory — only practical insights, mistakes, and systems that actually work. The goal is to inspire students, aspiring entrepreneurs, and professionals through honest conversations
                 </p>
+                 <p className="text-white/70 text-sm leading-relaxed">
+                  On this channel, will connect with entrepreneurs and businessmen to break down how their businesses work—from idea to execution. We discuss business models, management strategies, failures, and growth stories to help new entrepreneurs learn faster and smarter.
+Perfect for anyone who wants to start a business or improve the one they already have.
+                  </p>
                 <Link href="/podcast" className="inline-flex items-center gap-1 text-gold-400 text-sm font-semibold mt-4 hover:text-gold-300">
                   Listen to episodes <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
               </div>
 
-              <div className="bg-white rounded-2xl p-6 border border-border">
+              {/* <div className="bg-white rounded-2xl p-6 border border-border">
                 <h3 className="font-display text-lg font-bold mb-4">Who We Work With</h3>
                 <div className="space-y-3">
                   {[
@@ -87,7 +124,7 @@ export default function AboutPage() {
                     </div>
                   ))}
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -123,9 +160,9 @@ export default function AboutPage() {
           <Link href="/contact"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gold-gradient text-brand-900 font-semibold shadow-xl shadow-gold-500/25 hover:opacity-90 transition-opacity"
           >
-            Book Discovery Call <ArrowRight className="h-5 w-5" />
+            Book a Call <ArrowRight className="h-5 w-5" />
           </Link>
-        </div>
+        </div> 
       </section>
     </>
   )
